@@ -1,0 +1,36 @@
+Ubuntu 18.xx OpenCv 3.xx
+
+//cv_control.cpp
+#include "cv_control.h"
+#include "opencv2/opencv.hpp"
+
+//cv_control.h
+#include "GlobalVariables.h"
+#include <pthread.h>
+#include <opencv/cv.h>
+#include <opencv/cxcore.h>
+#include <opencv/highgui.h>
+
+//cv_main.cpp
+#include "cv_main.h"
+#include "cv_control.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <unistd.h>
+#include <iostream>
+
+//Replace cv::Mat img(image); at line 212
+cv::Mat img = cv::cvarrToMat(image);
+
+//Replace the simmple Mat lines at line 257
+cv::Mat backprj = cv::cvarrToMat(image);
+cv::Mat backprj_processed = cv::cvarrToMat(image);
+
+//cv_main.h
+#include "GlobalVariables.h"
+#include <pthread.h>
+#include<opencv2/core/core.hpp>
+#include<opencv2/highgui/highgui.hpp>
+#include <opencv2/core/core_c.h>

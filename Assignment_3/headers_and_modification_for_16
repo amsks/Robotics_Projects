@@ -1,0 +1,35 @@
+Ubuntu 16.xx OpenCv 2.xx
+
+//cv_control.cpp
+#include "cv_control.h"
+
+//cv_control.h
+#include "GlobalVariables.h"
+#include <pthread.h>
+#include <opencv/cv.h>
+#include <opencv/cxcore.h>
+#include <opencv/highgui.h>
+
+
+//cv_main.cpp
+#include "cv_main.h"
+#include "cv_control.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <unistd.h>
+
+//Replace cv::Mat img = cv::cvarrToMat(image); at line 212
+cv::Mat img(image);
+
+//Replace the cv::cvarrToMat(image); lines at line 257
+cv::Mat backprj(backproject);
+cv::Mat backprj_processed(backproject_processed);
+
+//cv_main.h
+#include "GlobalVariables.h"
+#include <pthread.h>
+#include <cv.h>
+#include <cxcore.h>
+#include <highgui.h>
